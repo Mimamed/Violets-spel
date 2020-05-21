@@ -150,13 +150,14 @@ public class Panel_Game extends Panel
             {
                 gotAnswer(hisAnswer);
                 Main.network.sendOrReadMessage(answer, false);
+                uppdateTurns(false);
             }
             else
             {
                 Main.network.sendOrReadMessage(answer, false);
                 Main.network.sendOrReadMessage(null, true);
+                uppdateTurns(true);
             }
-            uppdateTurns(false);
         }
     }
 
@@ -165,17 +166,19 @@ public class Panel_Game extends Panel
         public void actionPerformed(ActionEvent e)
         {
             answer = "Sizer";
+            youAnswered = true;
             if (!iBegin)
             {
-                youAnswered = true;
                 gotAnswer(hisAnswer);
+                Main.network.sendOrReadMessage(answer, false);
+                uppdateTurns(false);
             }
             else
             {
                 Main.network.sendOrReadMessage(answer, false);
                 Main.network.sendOrReadMessage(null, true);
+                uppdateTurns(true);
             }
-            uppdateTurns(false);
         }
     }
 
@@ -186,17 +189,19 @@ public class Panel_Game extends Panel
         public void actionPerformed(ActionEvent e)
         {
             answer = "Paper";
+            youAnswered = true;
             if (!iBegin)
             {
-                youAnswered = true;
                 gotAnswer(hisAnswer);
+                Main.network.sendOrReadMessage(answer, false);
+                uppdateTurns(false);
             }
             else
             {
                 Main.network.sendOrReadMessage(answer, false);
                 Main.network.sendOrReadMessage(null, true);
+                uppdateTurns(true);
             }
-            uppdateTurns(false);
         }
     }
 
