@@ -152,6 +152,7 @@ public class Panel_Game extends Panel
                 Main.network.sendOrReadMessage(answer, false);
                 uppdateTurns(false);
                 youAnswered = false;
+                Main.network.sendOrReadMessage(null, true);
             }
             else
             {
@@ -174,6 +175,7 @@ public class Panel_Game extends Panel
                 Main.network.sendOrReadMessage(answer, false);
                 uppdateTurns(false);
                 youAnswered = false;
+                Main.network.sendOrReadMessage(null, true);
             }
             else
             {
@@ -198,6 +200,7 @@ public class Panel_Game extends Panel
                 Main.network.sendOrReadMessage(answer, false);
                 uppdateTurns(false);
                 youAnswered = false;
+                Main.network.sendOrReadMessage(null, true);
             }
             else
             {
