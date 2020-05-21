@@ -9,7 +9,7 @@ public class Network implements Runnable
     static Server server = new Server();
     static Socket client;
     static Thread search = new Thread(server);
-    static boolean connected = false;
+    static boolean connected = false, serverConnected = true;
     static InputStream in;
     static OutputStream out;
     static byte[] buffer = new byte[500];
@@ -37,6 +37,7 @@ public class Network implements Runnable
                     server = null;
                     Main.window.Game.uppdateTurns(true);
                     Main.window.Game.iBegin = true;
+                    serverConnected = false;
                 }
             }catch (Exception e)
             {
@@ -57,6 +58,11 @@ public class Network implements Runnable
         Main.window.Menu.button1.setEnabled(true);
         Main.window.changePanel(Main.window.Game);
         System.out.println("Connectad!!");
+
+        if (serverConnected)
+        {
+            Main.network.sendOrReadMessage(null, true);
+        }
     }
 
     public static void sendOrReadMessage(String choice, boolean read)

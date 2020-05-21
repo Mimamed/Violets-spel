@@ -20,7 +20,6 @@ public class Server implements Runnable
             Main.network.connected = true;
             Main.window.Game.uppdateTurns(false);
             Main.window.Game.iBegin = false;
-            Main.network.sendOrReadMessage(null, true);
         } catch (IOException e)
         {
             e.printStackTrace();
