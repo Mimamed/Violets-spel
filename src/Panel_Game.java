@@ -151,6 +151,7 @@ public class Panel_Game extends Panel
                 gotAnswer(hisAnswer);
                 Main.network.sendOrReadMessage(answer, false);
                 uppdateTurns(false);
+                youAnswered = false;
             }
             else
             {
@@ -172,6 +173,7 @@ public class Panel_Game extends Panel
                 gotAnswer(hisAnswer);
                 Main.network.sendOrReadMessage(answer, false);
                 uppdateTurns(false);
+                youAnswered = false;
             }
             else
             {
@@ -195,6 +197,7 @@ public class Panel_Game extends Panel
                 gotAnswer(hisAnswer);
                 Main.network.sendOrReadMessage(answer, false);
                 uppdateTurns(false);
+                youAnswered = false;
             }
             else
             {
