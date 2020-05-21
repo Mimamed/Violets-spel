@@ -38,18 +38,21 @@ public class Panel_Game extends Panel
         button3.setMargin(new Insets(0,0,0,0));
         button3.setBackground(Color.BLUE);
         button3.setText("Stone");
+        button3.addActionListener(new Stone());
 
         button2.setBounds(166, 50, 150, 150);
         button2.setFocusPainted(false);
         button2.setMargin(new Insets(0,0,0,0));
         button2.setBackground(Color.ORANGE);
         button2.setText("Sizer");
+        button2.addActionListener(new Sizer());
 
         button1.setBounds(327, 50, 150, 150);
         button1.setFocusPainted(false);
         button1.setMargin(new Insets(0,0,0,0));
         button1.setBackground(Color.GREEN);
         button1.setText("Paper");
+        button1.addActionListener(new Paper());
     }
 
     private static void winOrLose(boolean win)

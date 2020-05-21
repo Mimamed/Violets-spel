@@ -67,6 +67,7 @@ public class Network implements Runnable
 
     public static void sendOrReadMessage(String choice, boolean read)
     {
+        System.out.println("något chickas eller tas emot read: " + read + " medelande: " + choice);
         if (read)
         {
             try
