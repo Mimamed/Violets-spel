@@ -1,3 +1,5 @@
+import com.dosse.upnp.UPnP;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 
@@ -15,6 +17,7 @@ public class Server implements Runnable
     {
         try
         {
+            UPnP.openPortTCP(Integer.parseInt(Main.window.Menu.serverPortField.getText()));
             serverSocket = new ServerSocket(Integer.parseInt(Main.window.Menu.serverPortField.getText()));
             Main.network.client = serverSocket.accept();
             Main.network.connected = true;
