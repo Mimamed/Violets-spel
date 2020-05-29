@@ -3,12 +3,12 @@ import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class Network implements Runnable
+public class Network implements Runnable // hela klassen handlar om att koppla ihop två personer och låter dom prata med varandra. Din servern väntar på andra personens klient samtidigt som din klienten söker efter andra personens servern
 {
 
-    static Server server = new Server();
-    static Socket client;
-    static Thread search = new Thread(server);
+    static Server server = new Server(); // detta är din server
+    static Socket client;// detta är din klient
+    static Thread search = new Thread(server);// medans den nuvarande threaden är clienten som letar efter andra personens server så kör denna threaden servern som väntar på andra personens klient
     static boolean connected = false, serverConnected = true;
     static InputStream in;
     static OutputStream out;
@@ -41,7 +41,7 @@ public class Network implements Runnable
                 }
             }catch (Exception e)
             {
-                System.out.println("trying again");
+                System.out.println("trying again..");
             }
         }
         //här

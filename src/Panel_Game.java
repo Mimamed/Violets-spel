@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Panel_Game extends Panel
+public class Panel_Game extends Panel // Detta är spelpanelen
 {
 
     static JButton button1 = new JButton(), button2 = new JButton(), button3 = new JButton(), button4 = new JButton();
@@ -17,7 +17,7 @@ public class Panel_Game extends Panel
         setup();
     }
 
-    public void setup()
+    public void setup() //Den metoden sätter upp knapparna och allt i panelen
     {
         this.add(button4);
         this.add(button3);
@@ -55,7 +55,7 @@ public class Panel_Game extends Panel
         button1.addActionListener(new Paper());
     }
 
-    private static void winOrLose(boolean win)
+    private static void winOrLose(boolean win) // denna bara skriver om du vunnit eller inte
     {
         if (win)
         {
@@ -146,18 +146,18 @@ public class Panel_Game extends Panel
         {
             answer = "Stone";
             youAnswered = true;
-            if (!iBegin)
+            if (!iBegin)//detta är spelet som anpassar sig till vem som börjar, här är det andra parsonen som börjar
             {
-                gotAnswer(hisAnswer);
-                Main.network.sendOrReadMessage(answer, false);
+                gotAnswer(hisAnswer);//du checkar hans svar
+                Main.network.sendOrReadMessage(answer, false);//du skickar ett svar
                 uppdateTurns(false);
                 youAnswered = false;
                 Main.network.sendOrReadMessage(null, true);
             }
-            else
+            else//här är det du som börjar
             {
-                Main.network.sendOrReadMessage(answer, false);
-                Main.network.sendOrReadMessage(null, true);
+                Main.network.sendOrReadMessage(answer, false);//du skickar ditt svar
+                Main.network.sendOrReadMessage(null, true);//väntar på opponentens svar
                 uppdateTurns(true);
             }
         }

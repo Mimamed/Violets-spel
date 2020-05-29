@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-public class Frame extends JFrame
+public class Frame extends JFrame//jframe är fönstret,den får också programmet att inte stänga ner
 {
 
     static Panel_Menu Menu = new Panel_Menu();

@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="sten sax påse:jar">
+    <output-path>$USER_HOME$/Downloads</output-path>
+    <root id="archive" name="sten sax påse.jar">
+      <element id="module-output" name="sten sax påse" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/WaifUPnP.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
